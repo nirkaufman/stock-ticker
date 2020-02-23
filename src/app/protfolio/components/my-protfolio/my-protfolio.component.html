@@ -1,0 +1,14 @@
+<div class="d-flex flex-column">
+    <div class="d-flex flex-row">
+        <h4>{{title}}</h4>
+        <div class="ml-auto">{{label}} <st-dropdown [items]="initSeconds"
+                         [itemSelected]=30
+                         (selectEvent)="selectTime($event)"></st-dropdown>
+        </div>
+
+    </div>
+    <div class="mt-4"
+         *ngFor="let s of initSock()">
+        <st-stock-card [stock]="s"></st-stock-card>
+    </div>
+</div>

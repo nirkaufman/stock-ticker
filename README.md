@@ -1,27 +1,57 @@
-# StellareStock
+# Stellare Stock
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
+## Diagram
+![Image description](img.jpg)
 
-## Development server
+## Struct
+* [Material](#Material)
+* [Protfolio](#Protfolio)
+  * [Components](#Components)
+  * [Store](#Store)
+  * [Services](#Services)
+  * [Models](#Models)
+  * [Enumerations](#Enumerations)
+  * [Styles](#Styles)
+* [Web-App](#Web-pp)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Material
+Material is a seperate module that based on Primeng for the UI components, gridsystem and flex of bootstrap.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Material include 4 components with a "st" prefix
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+| Components        | Selector | Inputs           | Output  |
+| ------------- |:-------------:| -----:| -----:|
+| dropdown     | st-dropdown | SelectItem[]   |selectEvent
+| listbox      | st-listbox  |   SelectItem[] |selectEvent
+| sidebar | st-sidebar     |    display | heideEvent
+| stock-card | st-stock-card  | Stock | removeEvent
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Protfolio
+Seperated module that includes the views of components
+| Components        | Selector | Inputs           | Output  |
+| ------------- |:-------------:| -----:| -----:|
+| header     | st-header | title   |sliderEvent
+| my-protfolio      | st-my-protfolio  |   title |label
+| stock-selector | st-sidebar  | SelectItem | heideEvent
+| stock-card | st-stock-card  | Stock | 
 
-## Running end-to-end tests
+## Store
+Todo
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Models
+A part of store 
+```js
+export interface Stock {
+    stock?: string;
+    price?: string;
+    volume?: string;
+    lastUpdate?: number;
+}
+```
+## Styles
+* main.scss
+* _fonts.scss
+* _varibales.scss

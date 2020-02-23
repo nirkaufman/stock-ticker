@@ -1,0 +1,23 @@
+<div class="container">
+    <st-sidebar [display]="displaySlider"
+                (hideEvent)="displaySlider = false">
+        <st-stocks-selector></st-stocks-selector>
+    </st-sidebar>
+    <div class="row">
+        <div class="col-12">
+            <st-header title="Stock Ticker"
+                       (sliderEvent)="displaySlider = true"></st-header>
+        </div>
+    </div>
+    <div class="row mt-5 p-3">
+        <div class="col-md-6 col-sm-12">
+            <div class="d-flex flex-column">
+                <st-my-protfolio title="My Protfolio"
+                                 label="Refresh Rate (seconds)"></st-my-protfolio>
+            </div>
+        </div>
+        <div class="col-6 d-none d-md-block">
+            <st-stocks-selector></st-stocks-selector>
+        </div>
+    </div>
+</div>
